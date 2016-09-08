@@ -40,5 +40,15 @@ def closer_to(tar, guess1, guess2)
 end
 
 # TODO - write two_as_one?
+def two_as_one?(a, b, c)
+	ab = a + b
+	ac = a + c
+	bc = b + c
+	if ab == c || ac == b || bc == a
+		return true
+	else
+		return false
+	end
+end
 
 # TODO - write pig_latinify
