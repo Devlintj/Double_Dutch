@@ -23,5 +23,18 @@ describe 'methods_quiz' do
     end
   end
 
+## not_string
+  describe 'not_string' do
+    it 'should add the word "not" to a string' do
+      not_string('bad').must_equal('not bad')
+    end
 
+    it 'should not add the word "not" to a string that starts with not' do
+      not_string('not good').must_equal('not good')
+    end
+
+    it 'should add the word "not" to a string' do
+      not_string('nothing').must_equal('nothing')
+    end
+  end
 end
