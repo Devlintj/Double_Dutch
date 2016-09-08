@@ -56,4 +56,31 @@ describe 'methods_quiz' do
       icy_hot?(10, 20).must_equal(false)
     end
   end
+
+## closer_to
+  describe 'closer_to' do
+    it 'should return the number closest to the target' do
+      closer_to(5, 6, 7).must_equal(6)
+    end
+
+    it 'should return the number closest to the target' do
+      closer_to(5, 7, 6).must_equal(6)
+    end
+
+    it 'should return the number closest to the target' do
+      closer_to(5, 4, 7).must_equal(4)
+    end
+
+    it 'should return the number closest to the target' do
+      closer_to(5, 7, 4).must_equal(6)
+    end
+
+    it 'should return zero if they are the same distance' do
+      closer_to(5, 6, 6).must_equal(0)
+    end
+
+    it 'should return zero if they are the same distance' do
+      closer_to(5, 4, 6).must_equal(0)
+    end
+  end
 end
