@@ -83,4 +83,23 @@ describe 'methods_quiz' do
       closer_to(5, 4, 6).must_equal(0)
     end
   end
+
+## two_as_one
+  describe 'two_as_one' do
+    it 'should be true if two ints add up to the other int' do
+      two_as_one?(1, 1, 2).must_equal(true)
+    end
+
+    it 'should be true if two ints add up to the other int' do
+      two_as_one?(2, 1, 1).must_equal(true)
+    end
+
+    it 'should be true if two ints add up to the other int' do
+      two_as_one?(2, 1, 1).must_equal(true)
+    end
+
+    it 'should be false if two ints do not add up to the other int' do
+      two_as_one?(3, 5, 7).must_equal(false)
+    end
+  end
 end
