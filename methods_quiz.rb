@@ -52,3 +52,9 @@ def two_as_one?(a, b, c)
 end
 
 # TODO - write pig_latinify
+def pig_latinify(str)
+	str.downcase
+	str.lstrip
+	str.rstrip
+	if str.start_with?(/[aeiou]/)
+		

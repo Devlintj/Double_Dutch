@@ -102,4 +102,27 @@ describe 'methods_quiz' do
       two_as_one?(3, 5, 7).must_equal(false)
     end
   end
+
+## pig_latinify
+  describe 'pig_latinify' do
+    it 'should move first letter to end and add ay if consonant' do
+      pig_latinify(crab).must_equal(rabcay)
+    end
+
+    it 'should add the word way at end if it starts with vowel' do
+      pig_latinify(art).must_equal(artway)
+    end
+
+    it 'should downcase' do
+      pig_latinify(aRt).must_equal(artway)
+    end
+
+    it 'should censor bad words' do
+      pig_latinify(damnit).must_equal(*mn*tday)
+    end
+
+    it 'should ignore whitespace' do
+      pig_latinify(    art    ).must_equal(artway)
+    end
+  end
 end
