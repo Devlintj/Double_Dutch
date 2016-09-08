@@ -17,7 +17,13 @@ def not_string(str)
 	end
 end
 # TODO - write icy_hot?
-
+def icy_hot(a, b)
+	if a < 0 && b > 100
+		return true
+	else
+		return false
+	end
+end
 # TODO - write closer_to
 
 # TODO - write two_as_one?
