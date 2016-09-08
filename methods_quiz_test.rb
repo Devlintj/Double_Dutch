@@ -37,4 +37,23 @@ describe 'methods_quiz' do
       not_string('nothing').must_equal('nothing')
     end
   end
+
+## icy_hot
+  describe 'icy_hot' do
+    it 'should be true if the temp is icy and hot' do
+      icy_hot?(-10, 120).must_equal(true)
+    end
+
+    it 'should be false if the temp is only icy' do
+      icy_hot?(-10, 50).must_equal(false)
+    end
+
+    it 'should be false if the temp is only hot' do
+      icy_hot?(10, 120).must_equal(false)
+    end
+
+    it 'should be false if the temp is neither icy or hot' do
+      icy_hot?(10, 20).must_equal(false)
+    end
+  end
 end
