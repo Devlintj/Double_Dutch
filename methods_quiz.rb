@@ -16,6 +16,7 @@ def not_string(str)
 		return str
 	end
 end
+
 # TODO - write icy_hot?
 def icy_hot(a, b)
 	if a < 0 && b > 100
@@ -24,7 +25,19 @@ def icy_hot(a, b)
 		return false
 	end
 end
+
 # TODO - write closer_to
+def closer_to(tar, guess1, guess2)
+	close1 = (tar - guess1).abs
+	close2 = (tar - guess2).abs
+	if close1 < close2
+		return guess1
+	elsif close2 < close1
+		return guess2
+	else
+		return 0
+	end
+end
 
 # TODO - write two_as_one?
 
