@@ -1,7 +1,7 @@
 
 # TODO - write has_teen?
 def has_teen?(a, b, c)
-	if a < 13 && a > 19 && b < 13 && b > 19 && c < 13 && c > 19
+	if ((a < 13) ^ (a > 19)) && ((b < 13) ^ (b > 19)) && ((c < 13) ^ (c > 19))
 		return false
 	else
 		return true
@@ -10,15 +10,15 @@ end
 
 # TODO - write not_string
 def not_string(str)
-	if str.starts_with('not')
-		return 'not' + str
-	else
+	if str.start_with?('not')
 		return str
+	else
+		return 'not' + str
 	end
 end
 
 # TODO - write icy_hot?
-def icy_hot(a, b)
+def icy_hot?(a, b)
 	if a < 0 && b > 100
 		return true
 	else

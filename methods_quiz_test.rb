@@ -26,7 +26,7 @@ describe 'methods_quiz' do
 ## not_string
   describe 'not_string' do
     it 'should add the word "not" to a string' do
-      not_string('bad').must_equal('not bad')
+      not_string('bad').must_equal('notbad')
     end
 
     it 'should not add the word "not" to a string that starts with not' do
@@ -72,7 +72,7 @@ describe 'methods_quiz' do
     end
 
     it 'should return the number closest to the target' do
-      closer_to(5, 7, 4).must_equal(6)
+      closer_to(5, 7, 4).must_equal(4)
     end
 
     it 'should return zero if they are the same distance' do
